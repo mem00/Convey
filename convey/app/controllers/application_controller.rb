@@ -12,6 +12,7 @@ class ApplicationController < ActionController::API
       render json: { errors: e.message }, status: :unauthorized
     end
   end
+  
   #from auth lecture
   def handle_login username, password
     @user = User.find_by_username(username)
