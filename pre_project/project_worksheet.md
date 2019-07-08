@@ -82,7 +82,7 @@ See Image
 | Library | What it Does | 
 | --- | :---: |  
 | ReactNative | Mobile App | 
-| MaterialUI | Icons | 
+| SendBird | Chat API | 
 | Websocket/XMPP | Communication | 
 
 
