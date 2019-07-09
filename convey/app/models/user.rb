@@ -1,5 +1,6 @@
 class User < ApplicationRecord
-  has_many :chats
+  has_many :to_chats, :class_name => 'Chat', :foreign_key => 'to_id'
+  has_many :from_chats, :class_name => 'Chat', :foreign_key => 'from_id'
   #from auth lecture  
   has_secure_password
   validates :username, presence: true, uniqueness: true
