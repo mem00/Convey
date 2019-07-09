@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignUpForm";
+import Chats from "./Components/Chats"
 import axios from 'axios'
 import decode from 'jwt-decode'
 
 class App extends Component {
   state = {
     currentUser: {},
+    token: ""
   }
 
   componentDidMount() {  
@@ -24,7 +26,8 @@ class App extends Component {
     const {token} = res.data
     localStorage.setItem("jwt", token)
     this.setState({
-      currentUser: decode(token)
+      currentUser: decode(token),
+      token
      })
   }
 
@@ -52,7 +55,7 @@ class App extends Component {
         <div className="App">    
         {this.state.currentUser.user_id ? <Redirect to='/home'/> : <Redirect to='/'/>}  
           <header>
-          <nav> {!this.state.currentUser.user_id ? <nav><Link to='/signup'>Sign Up</Link> <Link to='/login'>Log in</Link></nav> :  <a  onClick={this.handleLogout}> Log Out </a> }</nav>
+          <nav> {!this.state.currentUser.user_id ? <nav><Link to='/signup'>Sign Up</Link> <Link to='/login'>Log in</Link></nav> : <nav><Link to='/chats'>Chats</Link> <a  onClick={this.handleLogout}> Log Out </a> </nav>}</nav>
            <div>{this.state.currentUser.user_id && `Hello, ${this.state.currentUser.username}.`}</div>
             <h1>
               <Link to="/">
@@ -65,6 +68,7 @@ class App extends Component {
             <Route exact path = "/home" render={()=> <div>Welcome To Convey</div>}/>
             <Route exact path="/login" render={() => <LoginForm  handleLogin={this.handleLogin} />} />
             <Route exact path="/signup" render={() => <SignUpForm  handleSignUp={this.handleSignUp} />} />
+            <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={this.state.token}/>} />
 
           </Switch>
         </div>
