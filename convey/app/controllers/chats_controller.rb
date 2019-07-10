@@ -5,8 +5,9 @@ class ChatsController < ApplicationController
 
   # GET /chats
   def index
-    @chats = Chat.where from_id: @user.id
-    render json: @chats
+    @chats_from = Chat.where from_id: @user.id
+    @chats_to = Chat.where to_id: @user.id
+    render json: {chats_from: @chats_from, chats_to: @chats_to }
   end
 
   # GET /chats/1
@@ -43,7 +44,7 @@ class ChatsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_chat
       @user_chats = Chat.where from_id: params[:user_id]
-      @chat = @user_chats.find params[:id]
+      @chat = @user_chats.where to_id: params[:id]
     end
 
     def set_user
