@@ -1,10 +1,9 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :update, :destroy]
+  before_action :set_messages, only: [:index]
 
   # GET /messages
-  def index
-    @messages = Message.all
-
+  def index 
     render json: @messages
   end
 
@@ -18,7 +17,7 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      render json: @message, status: :created, location: @message
+      render json: @message
     else
       render json: @message.errors, status: :unprocessable_entity
     end
@@ -41,7 +40,13 @@ class MessagesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_message
-      @message = Message.find(params[:id])
+      @messages =  set_messages
+      @message = @messages.find params[:id]
+    end
+
+    def set_messages 
+      @chat =  Chat.where from_id: params[:user_id], to_id: params[:chat_id]
+      @messages = Message.where chat_id: @chat.ids
     end
 
     # Only allow a trusted parameter "white list" through.
