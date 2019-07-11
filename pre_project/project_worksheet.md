@@ -6,9 +6,9 @@
 |  Day | Deliverable | Status
 |---|---| ---|
 |Day 1| Project Description Wireframes / Priority Matrix / Functional Components | Complete
-|Day 2| Setup Up Backend With Auth  | AuthCopmlete
-|Day 3| Setup Front End Login and Create/Read| Incomplete
-|Day 4| Setup Websocket/XMPP| Incomplete
+|Day 2| Setup Up Backend With Auth  | Complete
+|Day 3| Setup Front End Login and Create/Read| Complete
+|Day 4| Setup Websocket/XMPP| Almost Compplete
 |Day 5| Setup Front End Update/Delete | Incomplete
 |Day 6| Styling/MVP | Incomplete
 |Day 7| Post-MVP | Incomplete
@@ -62,11 +62,11 @@ See Image
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
-| Backend | H | 6hrs| 7hrs|
-| Frontend | H | 12hrs| 2hrs |
+| Backend | H | 6hrs| 9hrs|
+| Frontend | H | 12hrs| 4hrs |
 | Auth | H | 6hrs| 2hrs |
 | Add contact | H | 6hrs| NA |
-| Websocket/XMPP | H | 6hrs| NA |
+| Websocket/XMPP | H | 6hrs| 6hr |
 | Styling | H | 8hrs| NA |
 | PostMVP | H | 8hrs| NA |
 | Total | H | 52hrs| NA | 
