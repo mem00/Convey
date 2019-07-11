@@ -24,7 +24,7 @@ class ChatsController < ApplicationController
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         ChatSerializer.new @chat
       ).serializable_hash
-      ActionCable.server.broadcast 'chats_channel', serialized_data 
+      ActionCable.server.broadcast "current_user_#{@current_user.id}", serialized_data 
       head :ok
     else
       render json: @chat.errors, status: :unprocessable_entity

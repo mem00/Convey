@@ -4,8 +4,10 @@ import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignUpForm";
 import Chats from "./Components/Chats"
 import Chat from "./Components/Chat"
+
 import axios from 'axios'
 import decode from 'jwt-decode'
+
 
 class App extends Component {
   state = {
@@ -49,6 +51,8 @@ class App extends Component {
     })
   
   }
+
+  userId = this.state.currentUser.id
   
   render() {
     return (
@@ -69,13 +73,15 @@ class App extends Component {
             <Route exact path = "/home" render={()=> <div>Welcome To Convey</div>}/>
             <Route exact path="/login" render={() => <LoginForm  handleLogin={this.handleLogin} />} />
             <Route exact path="/signup" render={() => <SignUpForm  handleSignUp={this.handleSignUp} />} />
-            <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={this.state.token}/>} />
-            <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} token={this.state.token}/>} />
+            
+            <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
+            <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
           </Switch>
         </div>
       </Router>
     );
   }
 }
+
 
 export default App;
