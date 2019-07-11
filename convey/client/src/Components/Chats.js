@@ -41,7 +41,7 @@ class Chats extends Component {
               
                 <div>
                 {
-                    //from tyson
+                    //from Tyson
                     this.acc ? this.acc : this.acc = <ActionCableConsumer
                     channel={{channel: "ChatsChannel"}}
                     onReceived={(res) =>this.handleReceivedChat(res)}
@@ -51,7 +51,7 @@ class Chats extends Component {
                     <h1>Chats</h1>
                     <ul>
                         {  this.state.chats.map(chat => (
-            <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_to: chat.to_id, chat_from: chat.from_id}}}>{chat.to_id}</Link></li>
+            <li key={chat.id}> <Link to={{pathname: '/chat', state: { id: chat.id, chat_to: chat.to_id, chat_from: chat.from_id}}}>{chat.to_id}</Link></li>
         ))}
                     </ul>
                     <NewChatForm userId = {this.props.userId} token ={this.props.token}/>

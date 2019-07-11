@@ -24,7 +24,13 @@ class ChatsController < ApplicationController
       serialized_data = ActiveModelSerializers::Adapter::Json.new(
         ChatSerializer.new @chat
       ).serializable_hash
+
+      # https://medium.com/@a.carreras.c/using-action-cable-for-private-messaging-presence-indicators-on-react-rails-app-526b3e34c14d
       ActionCable.server.broadcast "current_user_#{@current_user.id}", serialized_data 
+      
+      ActionCable.server.broadcast "current_user_#{params[:to_id]}", serialized_data
+  
+      
       head :ok
     else
       render json: @chat.errors, status: :unprocessable_entity

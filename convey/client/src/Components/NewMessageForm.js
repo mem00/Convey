@@ -2,12 +2,12 @@ import React, { Component } from "react";
 import {API_ROOT} from "../Constants"
 import axios from 'axios'
 
-class NewChatForm extends Component {
+class NewMessageForm extends Component {
   constructor(props){
-  super(props)
-  this.state = {
-    to_id: null,
-    from_id: this.props.userId
+    super(props)
+    this.state = {
+        chat_id: this.props.chat_id,
+        content: ""
   };
 }
 
@@ -25,7 +25,7 @@ class NewChatForm extends Component {
            Authorization: "Bearer " + this.props.token
         }
     }
-    await axios.post(`${API_ROOT}/users/${this.props.userId}/chats`, this.state, config)
+    await axios.post(`${API_ROOT}/users/${this.props.from_id}/chats/${this.props.to_id}/messages`, this.state, config)
   }
 
   render() {
@@ -34,22 +34,21 @@ class NewChatForm extends Component {
         <h2>create message</h2>
         <hr />
         <form
-          onSubmit={this.handleSubmit}
-         >
+          onSubmit={this.handleSubmit}>
           <p>To</p>
           <input
-            name="to_id"
-            type="number"
-            value={this.state.to_id}
+            name="content"
+            type="text"
+            value={this.state.content}
             onChange={this.handleChange}
           />
 
           <hr />
-          <button>Create Chat</button>
+          <button>Send Message</button>
         </form>
       </div>
     );
   }
 }
 
-export default NewChatForm;
+export default NewMessageForm;
