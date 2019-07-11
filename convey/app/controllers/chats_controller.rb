@@ -20,7 +20,12 @@ class ChatsController < ApplicationController
     @chat = Chat.new chat_params
 
     if @chat.save
-      render json: @chat
+      #https://medium.com/@dakota.lillie/using-action-cable-with-react-c37df065f296
+      serialized_data = ActiveModelSerializers::Adapter::Json.new(
+        ChatSerializer.new @chat
+      ).serializable_hash
+      ActionCable.server.broadcast 'chats_channel', serialized_data 
+      head :ok
     else
       render json: @chat.errors, status: :unprocessable_entity
     end

@@ -17,7 +17,12 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      render json: @message
+      #https://medium.com/@dakota.lillie/using-action-cable-with-react-c37df065f296
+      serialized_date = ActiveModelSerializers::Adapter::Json.new(
+        MessageSerializer.new message
+      ).serializable_hash
+      MessagesChannel.broadcast_to chat, serrialized_data
+      head :ok
     else
       render json: @message.errors, status: :unprocessable_entity
     end
