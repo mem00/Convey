@@ -5,7 +5,6 @@ import { API_ROOT} from '../Constants'
 import axios from 'axios'
 import NewChatForm from './NewChatForm'
 
-
 class Chats extends Component {
     state = {
         chats:[],
