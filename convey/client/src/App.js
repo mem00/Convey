@@ -4,6 +4,8 @@ import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignUpForm";
 import Chats from "./Components/Chats"
 import Chat from "./Components/Chat"
+import { ActionCableProvider } from "react-actioncable-provider";
+import {API_WS_ROOT} from './Constants'
 
 import axios from 'axios'
 import decode from 'jwt-decode'
@@ -56,6 +58,7 @@ class App extends Component {
   
   render() {
     return (
+
       <Router>
         <div className="App">    
         {this.state.currentUser.user_id ? <Redirect to='/home'/> : <Redirect to='/'/>}  
@@ -73,9 +76,12 @@ class App extends Component {
             <Route exact path = "/home" render={()=> <div>Welcome To Convey</div>}/>
             <Route exact path="/login" render={() => <LoginForm  handleLogin={this.handleLogin} />} />
             <Route exact path="/signup" render={() => <SignUpForm  handleSignUp={this.handleSignUp} />} />
-            
-            <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
-            <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
+            {this.state.currentUser.user_id ?
+              <ActionCableProvider url={API_WS_ROOT+`?user=${this.state.currentUser.user_id}`}>    
+                <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
+                <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
+              </ActionCableProvider>
+            : null}
           </Switch>
         </div>
       </Router>

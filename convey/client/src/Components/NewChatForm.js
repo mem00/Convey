@@ -31,7 +31,7 @@ class NewChatForm extends Component {
   render() {
     return (
       <div>
-        <h2>create message</h2>
+        <h2>create chat</h2>
         <hr />
         <form
           onSubmit={this.handleSubmit}

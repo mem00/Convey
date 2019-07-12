@@ -35,7 +35,6 @@ class NewMessageForm extends Component {
         <hr />
         <form
           onSubmit={this.handleSubmit}>
-          <p>To</p>
           <input
             name="content"
             type="text"
