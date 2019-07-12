@@ -4,7 +4,6 @@ import { ActionCableConsumer} from 'react-actioncable-provider'
 import { API_ROOT} from '../Constants'
 import axios from 'axios'
 import NewChatForm from './NewChatForm'
-import Chat from './Chat'
 import { ActionCableProvider } from "react-actioncable-provider";
 import {API_WS_ROOT} from '../Constants'
 
@@ -13,7 +12,7 @@ const acc = ""
 class Chats extends Component {
     state = {
         chats:[],
-        activeChat: {},
+        activeConversation: null,
     }
 
     async componentDidMount(){
@@ -35,10 +34,6 @@ class Chats extends Component {
         })
     }
 
-    openChat = activeChat => {
-        this.setState({activeChat})
-    }
-
     render(){
 
         return(      
@@ -53,17 +48,17 @@ class Chats extends Component {
                     <h1>Chats</h1>
                     <ul>
                     {this.state.chats.map(chat => (
-                        <li key={chat.id} onClick={()=>this.openChat(chat)}>{chat.to_id}</li>
+                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.to_id}</Link></li>
                      ))}
                     </ul>
                     <NewChatForm userId = {this.props.userId} token ={this.props.token}/>
-
-                    {this.state.activeChat.id ? <Chat token = {this.props.token} chat_id={this.state.activeChat.id} to_id={this.state.activeChat.to_id} from_id={this.state.activeChat.from_id} /> : null}
                 </div>
           
             
         )
     }
+
+
 }
 
 export default Chats
