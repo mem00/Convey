@@ -4,10 +4,7 @@ import { ActionCableConsumer} from 'react-actioncable-provider'
 import { API_ROOT} from '../Constants'
 import axios from 'axios'
 import NewChatForm from './NewChatForm'
-import { ActionCableProvider } from "react-actioncable-provider";
-import {API_WS_ROOT} from '../Constants'
 
-const acc = ""
 
 class Chats extends Component {
     state = {

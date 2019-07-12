@@ -6,7 +6,7 @@ class NewChatForm extends Component {
   constructor(props){
   super(props)
   this.state = {
-    to_id: null,
+    username: "",
     from_id: this.props.userId
   };
 }
@@ -25,7 +25,20 @@ class NewChatForm extends Component {
            Authorization: "Bearer " + this.props.token
         }
     }
-    await axios.post(`${API_ROOT}/users/${this.props.userId}/chats`, this.state, config)
+    const res = await axios.get(`${API_ROOT}/users/${this.state.username}`, config)
+    if(res.data) {
+    const {id} = res.data
+    const data = {
+        to_id: id,
+        from_id: this.state.from_id
+    }
+    await axios.post(`${API_ROOT}/users/${this.props.userId}/chats`, data, config)
+    } else{
+        alert("Sorry, user does not exist. Please tell them to signup!")
+    }
+    this.setState({
+        username: ""
+    })
   }
 
   render() {
@@ -38,9 +51,9 @@ class NewChatForm extends Component {
          >
           <p>To</p>
           <input
-            name="to_id"
-            type="number"
-            value={this.state.to_id}
+            name="username"
+            type="username"
+            value={this.state.username}
             onChange={this.handleChange}
           />
 
