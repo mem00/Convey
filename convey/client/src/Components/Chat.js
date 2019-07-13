@@ -1,8 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
 import {API_ROOT} from '../Constants'
-import { ActionCableProvider } from "react-actioncable-provider";
-import {API_WS_ROOT} from '../Constants'
 import { ActionCableConsumer} from 'react-actioncable-provider'
 import NewMessageForm from './NewMessageForm'
 
@@ -43,7 +41,7 @@ class Chat extends Component{
                 /> }
                     <ul>
                         {this.state.messages.map(message=>(
-                        <li key={message.id}>{message.content}</li> 
+                        <li key={message.id}>{message.from_username}:{<br/>}{message.content}</li> 
                         ))}
                     </ul>
                     <NewMessageForm chat_id = {this.props.location.state.chat_id} from_id = {this.props.location.state.from_id} to_id = {this.props.location.state.to_id} />
