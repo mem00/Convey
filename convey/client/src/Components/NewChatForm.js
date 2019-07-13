@@ -25,15 +25,34 @@ class NewChatForm extends Component {
            Authorization: "Bearer " + this.props.token
         }
     }
+
     const res = await axios.get(`${API_ROOT}/users/${this.state.username}`, config)
     if(res.data) {
-    const {id} = res.data
-    const data = {
-        to_id: id,
-        from_id: this.state.from_id
+      const {id} = res.data
+      let chatAlreadyExists = false;
+
+      for(let i = 0; i < this.props.chats.length; i++) {
+        if(this.props.chats[i].from_id === id || this.props.chats[i].to_id === id){
+          chatAlreadyExists = true
+          break
+        }
+      }
+      if(!chatAlreadyExists){
+        const data = {
+            to_id: id,
+            from_id: this.state.from_id,
+            from_username: this.props.username,
+            to_username: this.state.username
+        }
+
+        await axios.post(`${API_ROOT}/users/${this.props.userId}/chats`, data, config)
     }
-    await axios.post(`${API_ROOT}/users/${this.props.userId}/chats`, data, config)
-    } else{
+    else{
+      console.log("hy1")
+      alert("You already have a chat with this user!")
+    }
+    } 
+    else{
         alert("Sorry, user does not exist. Please tell them to signup!")
     }
     this.setState({

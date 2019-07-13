@@ -50,7 +50,7 @@ class Chats extends Component {
                         <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.from_username}</Link></li>
                     ))}
                     </ul>
-                    <NewChatForm userId = {this.props.userId} token ={this.props.token}/>
+                    <NewChatForm userId = {this.props.userId} token ={this.props.token} chats={this.state.chats} from_username={this.props.username}/>
                 </div>
           
             
