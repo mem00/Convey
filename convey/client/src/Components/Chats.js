@@ -24,7 +24,6 @@ class Chats extends Component {
     }
 
     handleReceivedChat = res => {
-        console.log('fire')
         const {chat} = res;
         this.setState({
             chats: [...this.state.chats, chat]

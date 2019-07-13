@@ -7,7 +7,8 @@ class NewMessageForm extends Component {
     super(props)
     this.state = {
         chat_id: this.props.chat_id,
-        content: ""
+        content: "",
+        from_username: this.props.from_username
   };
 }
 

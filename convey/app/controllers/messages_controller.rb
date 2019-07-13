@@ -57,6 +57,6 @@ class MessagesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def message_params
-      params.require(:message).permit(:content, :chat_id)
+      params.require(:message).permit(:content, :chat_id, :from_username)
     end
 end

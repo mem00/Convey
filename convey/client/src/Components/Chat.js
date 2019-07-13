@@ -44,7 +44,7 @@ class Chat extends Component{
                         <li key={message.id}>{message.from_username}:{<br/>}{message.content}</li> 
                         ))}
                     </ul>
-                    <NewMessageForm chat_id = {this.props.location.state.chat_id} from_id = {this.props.location.state.from_id} to_id = {this.props.location.state.to_id} />
+                    <NewMessageForm chat_id = {this.props.location.state.chat_id} from_id = {this.props.location.state.from_id} to_id = {this.props.location.state.to_id} from_username={this.props.username}/>
                 </div>
            
         )

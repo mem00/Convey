@@ -79,7 +79,7 @@ class App extends Component {
             {this.state.currentUser.user_id ?
               <ActionCableProvider url={API_WS_ROOT+`?user=${this.state.currentUser.user_id}`}>    
                 <Route exact path="/chats" render={(props) => <Chats {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
-                <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} token={localStorage.getItem('jwt')}/>} />
+                <Route exact path="/chat" render={(props) => <Chat {...props} userId ={this.state.currentUser.user_id} username={this.state.currentUser.username} token={localStorage.getItem('jwt')}/>} />
               </ActionCableProvider>
             : null}
           </Switch>
