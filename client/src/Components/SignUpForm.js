@@ -5,7 +5,6 @@ import React, { Component } from "react";
 class SignUpForm extends Component {
   state = {
     username: "",
-    phone_number: "",
     password: "",
     passwordConfirm: ""
   };
@@ -47,13 +46,6 @@ class SignUpForm extends Component {
             name="username"
             type="text"
             value={this.state.username}
-            onChange={this.handleChange}
-          />
-            <p>Phone Number:</p>
-          <input
-            name="phone_number"
-            type="text"
-            value={this.state.phone_number}
             onChange={this.handleChange}
           />
           <p>Password:</p>

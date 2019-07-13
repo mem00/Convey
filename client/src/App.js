@@ -49,7 +49,8 @@ class App extends Component {
     const {token} = res.data
     localStorage.setItem("jwt", token)
     this.setState({
-      currentUser: decode(token)
+      currentUser: decode(token),
+      token: token
     })
   
   }

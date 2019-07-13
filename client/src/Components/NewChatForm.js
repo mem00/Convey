@@ -41,7 +41,7 @@ class NewChatForm extends Component {
         const data = {
             to_id: id,
             from_id: this.state.from_id,
-            from_username: this.props.username,
+            from_username: this.props.from_username,
             to_username: this.state.username
         }
 
@@ -75,7 +75,6 @@ class NewChatForm extends Component {
             value={this.state.username}
             onChange={this.handleChange}
           />
-
           <hr />
           <button>Create Chat</button>
         </form>

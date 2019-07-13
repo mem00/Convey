@@ -17413,3 +17413,1187 @@ Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms)
 
 Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 14:03:09 -0400
 ChatsChannel stopped streaming from current_user_1
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1755545414341737585)[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1755545414341737585)[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelmcguire/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:38:57 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelmcguire/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:38:57 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:39:21 -0400
+ChatsChannel stopped streaming from current_user_1
+Started POST "/auth/login" for ::1 at 2019-07-13 15:39:27 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"mem", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mem", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 306ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:39:29 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:39:29 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:39:43 -0400
+ChatsChannel stopped streaming from current_user_1
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:39:44 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:39:44 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (11.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:40:50 -0400
+ChatsChannel stopped streaming from current_user_1
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:40:52 -0400
+Started GET "/users/1/chats" for ::1 at 2019-07-13 15:40:52 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:40:52 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (40.6ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (55.46ms)
+Completed 200 OK in 76ms (Views: 11.8ms | ActiveRecord: 49.1ms)
+
+
+Unsubscribing from channel: {"channel":"ChatsChannel"}
+ChatsChannel stopped streaming from current_user_1
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages_2_1
+Started GET "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:40:53 -0400
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"1", "chat_id"=>"2"}
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "chats"."id" FROM "chats" WHERE "chats"."from_id" = $1 AND "chats"."to_id" = $2[0m  [["from_id", 1], ["to_id", 2]]
+  ↳ app/controllers/messages_controller.rb:55
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 1]]
+  ↳ app/controllers/messages_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.15ms)
+Completed 200 OK in 52ms (Views: 33.2ms | ActiveRecord: 10.7ms)
+
+
+Started POST "/auth/login" for ::1 at 2019-07-13 15:47:02 -0400
+Processing by AuthenticationController#login as HTML
+  Parameters: {"username"=>"rob", "password"=>"[FILTERED]", "authentication"=>{"username"=>"rob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 280ms (Views: 0.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/cable?user=2" for ::1 at 2019-07-13 15:47:06 -0400
+Started GET "/cable/?user=2" [WebSocket] for ::1 at 2019-07-13 15:47:06 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMg)
+Started GET "/users/2/chats" for ::1 at 2019-07-13 15:47:06 -0400
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_2
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 2]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.2ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 2]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.01ms)
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 1.3ms)
+
+
+Unsubscribing from channel: {"channel":"ChatsChannel"}
+ChatsChannel stopped streaming from current_user_2
+MessagesChannel is transmitting the subscription confirmation
+MessagesChannel is streaming from messages_2_1
+Started GET "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:07 -0400
+Processing by MessagesController#index as HTML
+  Parameters: {"user_id"=>"1", "chat_id"=>"2"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "chats"."id" FROM "chats" WHERE "chats"."from_id" = $1 AND "chats"."to_id" = $2[0m  [["from_id", 1], ["to_id", 2]]
+  ↳ app/controllers/messages_controller.rb:55
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 1]]
+  ↳ app/controllers/messages_controller.rb:7
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 5ms (Views: 2.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:10 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"chat_id"=>"2", "content"=>"hey", "from_username"=>"rob", "user_id"=>"1", "message"=>{"content"=>"hey", "chat_id"=>"2", "from_username"=>"rob"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT  "chats".* FROM "chats" WHERE "chats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mMessage Create (1.0ms)[0m  [1m[32mINSERT INTO "messages" ("content", "chat_id", "created_at", "updated_at", "from_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "hey"], ["chat_id", 1], ["created_at", "2019-07-13 19:47:10.119867"], ["updated_at", "2019-07-13 19:47:10.119867"], ["from_username", "rob"]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:19
+[ActionCable] Broadcasting to messages_2_1: {:message=>{:id=>25, :chat_id=>1, :content=>"hey", :created_at=>Sat, 13 Jul 2019 19:47:10 UTC +00:00, :from_username=>"rob"}}
+Completed 200 OK in 70ms (ActiveRecord: 41.5ms)
+
+
+MessagesChannel transmitting {"message"=>{"id"=>25, "chat_id"=>1, "content"=>"hey", "created_at"=>"2019-07-13T19:47:10.119Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+MessagesChannel transmitting {"message"=>{"id"=>25, "chat_id"=>1, "content"=>"hey", "created_at"=>"2019-07-13T19:47:10.119Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+Started POST "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:30 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"chat_id"=>"2", "content"=>"what up", "from_username"=>"mem", "user_id"=>"1", "message"=>{"content"=>"what up", "chat_id"=>"2", "from_username"=>"mem"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT  "chats".* FROM "chats" WHERE "chats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mMessage Create (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("content", "chat_id", "created_at", "updated_at", "from_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "what up"], ["chat_id", 1], ["created_at", "2019-07-13 19:47:30.219514"], ["updated_at", "2019-07-13 19:47:30.219514"], ["from_username", "mem"]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:19
+[ActionCable] Broadcasting to messages_2_1: {:message=>{:id=>26, :chat_id=>1, :content=>"what up", :created_at=>Sat, 13 Jul 2019 19:47:30 UTC +00:00, :from_username=>"mem"}}
+Completed 200 OK in 45ms (ActiveRecord: 40.9ms)
+
+
+MessagesChannel transmitting {"message"=>{"id"=>26, "chat_id"=>1, "content"=>"what up", "created_at"=>"2019-07-13T19:47:30.219Z", "from_username"=>"mem"}} (via streamed from messages_2_1)
+MessagesChannel transmitting {"message"=>{"id"=>26, "chat_id"=>1, "content"=>"what up", "created_at"=>"2019-07-13T19:47:30.219Z", "from_username"=>"mem"}} (via streamed from messages_2_1)
+Started POST "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:36 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"chat_id"=>"2", "content"=>"nm thats cool", "from_username"=>"rob", "user_id"=>"1", "message"=>{"content"=>"nm thats cool", "chat_id"=>"2", "from_username"=>"rob"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT  "chats".* FROM "chats" WHERE "chats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "chat_id", "created_at", "updated_at", "from_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "nm thats cool"], ["chat_id", 1], ["created_at", "2019-07-13 19:47:36.525256"], ["updated_at", "2019-07-13 19:47:36.525256"], ["from_username", "rob"]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:19
+[ActionCable] Broadcasting to messages_2_1: {:message=>{:id=>27, :chat_id=>1, :content=>"nm thats cool", :created_at=>Sat, 13 Jul 2019 19:47:36 UTC +00:00, :from_username=>"rob"}}
+Completed 200 OK in 44ms (ActiveRecord: 40.5ms)
+
+
+MessagesChannel transmitting {"message"=>{"id"=>27, "chat_id"=>1, "content"=>"nm thats cool", "created_at"=>"2019-07-13T19:47:36.525Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+MessagesChannel transmitting {"message"=>{"id"=>27, "chat_id"=>1, "content"=>"nm thats cool", "created_at"=>"2019-07-13T19:47:36.525Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+Started POST "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:47 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"chat_id"=>"2", "content"=>"chilling ", "from_username"=>"mem", "user_id"=>"1", "message"=>{"content"=>"chilling ", "chat_id"=>"2", "from_username"=>"mem"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT  "chats".* FROM "chats" WHERE "chats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "chat_id", "created_at", "updated_at", "from_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "chilling "], ["chat_id", 1], ["created_at", "2019-07-13 19:47:47.422302"], ["updated_at", "2019-07-13 19:47:47.422302"], ["from_username", "mem"]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:19
+[ActionCable] Broadcasting to messages_2_1: {:message=>{:id=>28, :chat_id=>1, :content=>"chilling ", :created_at=>Sat, 13 Jul 2019 19:47:47 UTC +00:00, :from_username=>"mem"}}
+Completed 200 OK in 5ms (ActiveRecord: 1.2ms)
+
+
+MessagesChannel transmitting {"message"=>{"id"=>28, "chat_id"=>1, "content"=>"chilling ", "created_at"=>"2019-07-13T19:47:47.422Z", "from_username"=>"mem"}} (via streamed from messages_2_1)
+MessagesChannel transmitting {"message"=>{"id"=>28, "chat_id"=>1, "content"=>"chilling ", "created_at"=>"2019-07-13T19:47:47.422Z", "from_username"=>"mem"}} (via streamed from messages_2_1)
+Started POST "/users/1/chats/2/messages" for ::1 at 2019-07-13 15:47:51 -0400
+Processing by MessagesController#create as HTML
+  Parameters: {"chat_id"=>"2", "content"=>"cool", "from_username"=>"rob", "user_id"=>"1", "message"=>{"content"=>"cool", "chat_id"=>"2", "from_username"=>"rob"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mChat Load (0.2ms)[0m  [1m[34mSELECT  "chats".* FROM "chats" WHERE "chats"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[36mMessage Create (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("content", "chat_id", "created_at", "updated_at", "from_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["content", "cool"], ["chat_id", 1], ["created_at", "2019-07-13 19:47:51.414638"], ["updated_at", "2019-07-13 19:47:51.414638"], ["from_username", "rob"]]
+  ↳ app/controllers/messages_controller.rb:19
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/messages_controller.rb:19
+[ActionCable] Broadcasting to messages_2_1: {:message=>{:id=>29, :chat_id=>1, :content=>"cool", :created_at=>Sat, 13 Jul 2019 19:47:51 UTC +00:00, :from_username=>"rob"}}
+Completed 200 OK in 6ms (ActiveRecord: 2.4ms)
+
+
+MessagesChannel transmitting {"message"=>{"id"=>29, "chat_id"=>1, "content"=>"cool", "created_at"=>"2019-07-13T19:47:51.414Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+MessagesChannel transmitting {"message"=>{"id"=>29, "chat_id"=>1, "content"=>"cool", "created_at"=>"2019-07-13T19:47:51.414Z", "from_username"=>"rob"}} (via streamed from messages_2_1)
+Finished "/cable/?user=2" [WebSocket] for ::1 at 2019-07-13 15:47:54 -0400
+MessagesChannel stopped streaming from messages_2_1
+Unsubscribing from channel: {"channel":"MessagesChannel","to_id":2,"from_id":1}
+MessagesChannel stopped streaming from messages_2_1
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Started GET "/users/1/chats" for ::1 at 2019-07-13 15:48:05 -0400
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.04ms)
+Completed 200 OK in 15ms (Views: 3.8ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/users" for ::1 at 2019-07-13 15:48:26 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"sarah", "phone_number"=>"122 222", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"sarah"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "sarah"], ["password_digest", "$2a$12$/96X4wsWrOoBiwfiesCpDe74LueC3kABbgD5IYRHgn.dRhcXB/w/K"], ["created_at", "2019-07-13 19:48:27.035632"], ["updated_at", "2019-07-13 19:48:27.035632"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 602ms (Views: 0.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/cable?user=4" for ::1 at 2019-07-13 15:48:29 -0400
+Started GET "/users/4/chats" for ::1 at 2019-07-13 15:48:29 -0400
+Started GET "/cable/?user=4" [WebSocket] for ::1 at 2019-07-13 15:48:29 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNA)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_4
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 4]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.2ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 4]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.49ms)
+Completed 200 OK in 6ms (Views: 2.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 15:48:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/4/chats" for ::1 at 2019-07-13 15:48:32 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>4, "to_username"=>"mem", "user_id"=>"4", "chat"=>{"to_id"=>1, "from_id"=>4, "to_username"=>"mem"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.7ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 19:48:32.119291"], ["updated_at", "2019-07-13 19:48:32.119291"], ["to_id", 1], ["from_id", 4]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 4]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_4: {:chat=>{:id=>4, :to_id=>1, :from_id=>4, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>4, :to_id=>1, :from_id=>4, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>4, "to_id"=>1, "from_id"=>4, "messages"=>[]}} (via streamed from current_user_4)
+Completed 200 OK in 97ms (ActiveRecord: 42.2ms)
+
+
+ChatsChannel transmitting {"chat"=>{"id"=>4, "to_id"=>1, "from_id"=>4, "messages"=>[]}} (via streamed from current_user_1)
+Started GET "/users/sarah" for ::1 at 2019-07-13 15:48:45 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sarah"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sarah"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 15:48:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:50:10 -0400
+ChatsChannel stopped streaming from current_user_1
+Finished "/cable/?user=4" [WebSocket] for ::1 at 2019-07-13 15:50:10 -0400
+ChatsChannel stopped streaming from current_user_4
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:51:28 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:51:28 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/users/1/chats" for ::1 at 2019-07-13 15:51:28 -0400
+Processing by ChatsController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Parameters: {"user_id"=>"1"}
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.87ms)
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for ::1 at 2019-07-13 15:51:43 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"pedro", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"pedro"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pedro"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "pedro"], ["password_digest", "$2a$12$H7W7KptCRrshZ2PCvFuGz.LUmfQFN864dOiepfIL8zikAce88LJ2O"], ["created_at", "2019-07-13 19:51:43.959283"], ["updated_at", "2019-07-13 19:51:43.959283"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pedro"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 592ms (Views: 0.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/cable?user=5" for ::1 at 2019-07-13 15:51:50 -0400
+Started GET "/cable/?user=5" [WebSocket] for ::1 at 2019-07-13 15:51:50 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Started GET "/users/5/chats" for ::1 at 2019-07-13 15:51:50 -0400
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNQ)
+Processing by ChatsController#index as HTML
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_5
+  Parameters: {"user_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 5]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 5]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.11ms)
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 15:51:52 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.33ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/5/chats" for ::1 at 2019-07-13 15:51:52 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>5, "to_username"=>"mem", "user_id"=>"5", "chat"=>{"to_id"=>1, "from_id"=>5, "to_username"=>"mem"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.4ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 19:51:52.764155"], ["updated_at", "2019-07-13 19:51:52.764155"], ["to_id", 1], ["from_id", 5]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 5]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_5: {:chat=>{:id=>5, :to_id=>1, :from_id=>5, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>5, :to_id=>1, :from_id=>5, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>5, "to_id"=>1, "from_id"=>5, "messages"=>[]}} (via streamed from current_user_5)
+Completed 200 OK in 50ms (ActiveRecord: 42.6ms)
+
+
+ChatsChannel transmitting {"chat"=>{"id"=>5, "to_id"=>1, "from_id"=>5, "messages"=>[]}} (via streamed from current_user_1)
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:52:47 -0400
+ChatsChannel stopped streaming from current_user_1
+Finished "/cable/?user=5" [WebSocket] for ::1 at 2019-07-13 15:52:47 -0400
+ChatsChannel stopped streaming from current_user_5
+Started POST "/users" for ::1 at 2019-07-13 15:53:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"jen", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"jen"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jen"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "jen"], ["password_digest", "$2a$12$Gfu42vR5QOawzugb5qQLJuTBKhJRRhupJcTeOSLY.FsJ4xwkeu4bO"], ["created_at", "2019-07-13 19:53:10.804558"], ["updated_at", "2019-07-13 19:53:10.804558"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jen"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 582ms (Views: 0.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/cable?user=6" for ::1 at 2019-07-13 15:53:12 -0400
+Started GET "/cable/?user=6" [WebSocket] for ::1 at 2019-07-13 15:53:12 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/users/6/chats" for ::1 at 2019-07-13 15:53:12 -0400
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Processing by ChatsController#index as HTML
+  ↳ app/channels/application_cable/connection.rb:13
+  Parameters: {"user_id"=>"6"}
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNg)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+ChatsChannel is transmitting the subscription confirmation
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+ChatsChannel is streaming from current_user_6
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 6]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 6]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.53ms)
+Completed 200 OK in 8ms (Views: 2.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:53:14 -0400
+Started GET "/users/1/chats" for ::1 at 2019-07-13 15:53:14 -0400
+Processing by ChatsController#index as HTML
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:53:14 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+[active_model_serializers]   [1m[36mChat Load (5.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (1.2ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (11.27ms)
+Completed 200 OK in 17ms (Views: 5.1ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 15:53:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.27ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/6/chats" for ::1 at 2019-07-13 15:53:16 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>6, "to_username"=>"mem", "user_id"=>"6", "chat"=>{"to_id"=>1, "from_id"=>6, "to_username"=>"mem"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.3ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 19:53:16.892246"], ["updated_at", "2019-07-13 19:53:16.892246"], ["to_id", 1], ["from_id", 6]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 6]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_6: {:chat=>{:id=>6, :to_id=>1, :from_id=>6, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>6, :to_id=>1, :from_id=>6, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>6, "to_id"=>1, "from_id"=>6, "messages"=>[]}} (via streamed from current_user_6)
+Completed 200 OK in 48ms (ActiveRecord: 40.8ms)
+
+
+ChatsChannel transmitting {"chat"=>{"id"=>6, "to_id"=>1, "from_id"=>6, "messages"=>[]}} (via streamed from current_user_1)
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:56:06 -0400
+ChatsChannel stopped streaming from current_user_1
+Finished "/cable/?user=6" [WebSocket] for ::1 at 2019-07-13 15:56:06 -0400
+ChatsChannel stopped streaming from current_user_6
+Started GET "/cable?user=1" for ::1 at 2019-07-13 15:56:09 -0400
+Started GET "/users/1/chats" for ::1 at 2019-07-13 15:56:09 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 15:56:09 -0400
+Processing by ChatsController#index as HTML
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (35.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (14.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+[active_model_serializers]   [1m[36mChat Load (9.0ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (13.5ms)
+Completed 200 OK in 54ms (Views: 4.5ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/cable?user=6" for ::1 at 2019-07-13 15:56:11 -0400
+Started GET "/cable/?user=6" [WebSocket] for ::1 at 2019-07-13 15:56:11 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNg)
+Started GET "/users/6/chats" for ::1 at 2019-07-13 15:56:11 -0400
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_6
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 6]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.2ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 6]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.33ms)
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/rob" for ::1 at 2019-07-13 15:56:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rob"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.4ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/6/chats" for ::1 at 2019-07-13 15:56:30 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>2, "from_id"=>6, "to_username"=>"rob", "user_id"=>"6", "chat"=>{"to_id"=>2, "from_id"=>6, "to_username"=>"rob"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.4ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 19:56:30.928127"], ["updated_at", "2019-07-13 19:56:30.928127"], ["to_id", 2], ["from_id", 6]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (39.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 7]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_6: {:chat=>{:id=>7, :to_id=>2, :from_id=>6, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_2: {:chat=>{:id=>7, :to_id=>2, :from_id=>6, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>7, "to_id"=>2, "from_id"=>6, "messages"=>[]}} (via streamed from current_user_6)
+Completed 200 OK in 51ms (ActiveRecord: 41.4ms)
+
+
+Finished "/cable/?user=6" [WebSocket] for ::1 at 2019-07-13 15:59:45 -0400
+ChatsChannel stopped streaming from current_user_6
+Started POST "/users" for ::1 at 2019-07-13 15:59:56 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"sam", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"sam"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "sam"], ["password_digest", "$2a$12$aYO.yKvclTlONP0oIb8qhOQJTv1M31V6G.vAmHKPrKYnvtHjYXxFO"], ["created_at", "2019-07-13 19:59:56.796961"], ["updated_at", "2019-07-13 19:59:56.796961"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "sam"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 609ms (Views: 4.0ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/cable?user=7" for ::1 at 2019-07-13 15:59:59 -0400
+Started GET "/cable/?user=7" [WebSocket] for ::1 at 2019-07-13 15:59:59 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/users/7/chats" for ::1 at 2019-07-13 15:59:59 -0400
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"7"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (7.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+  ↳ app/controllers/application_controller.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNw)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_7
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 7]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 7]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (2.13ms)
+Completed 200 OK in 24ms (Views: 1.9ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 16:00:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/7/chats" for ::1 at 2019-07-13 16:00:02 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>7, "to_username"=>"mem", "user_id"=>"7", "chat"=>{"to_id"=>1, "from_id"=>7, "to_username"=>"mem"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.4ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 20:00:02.235464"], ["updated_at", "2019-07-13 20:00:02.235464"], ["to_id", 1], ["from_id", 7]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 8]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_7: {:chat=>{:id=>8, :to_id=>1, :from_id=>7, :from_username=>nil, :to_username=>nil, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>8, :to_id=>1, :from_id=>7, :from_username=>nil, :to_username=>nil, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>8, "to_id"=>1, "from_id"=>7, "from_username"=>nil, "to_username"=>nil, "messages"=>[]}} (via streamed from current_user_7)
+Completed 200 OK in 76ms (ActiveRecord: 44.7ms)
+
+
+Started GET "/cable?user=1" for ::1 at 2019-07-13 16:00:03 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:00:03 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Started GET "/cable?user=1" for ::1 at 2019-07-13 16:00:28 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelmcguire/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:00:28 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Started GET "/cable?user=7" for ::1 at 2019-07-13 16:00:30 -0400
+Started GET "/cable/?user=7" [WebSocket] for ::1 at 2019-07-13 16:00:30 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNw)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_7
+Started GET "/users/jill" for ::1 at 2019-07-13 16:00:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"jill"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jill"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.46ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/7/chats" for ::1 at 2019-07-13 16:00:31 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>3, "from_id"=>7, "to_username"=>"jill", "user_id"=>"7", "chat"=>{"to_id"=>3, "from_id"=>7, "to_username"=>"jill"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+Unpermitted parameter: :to_username
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.8ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2019-07-13 20:00:31.673504"], ["updated_at", "2019-07-13 20:00:31.673504"], ["to_id", 3], ["from_id", 7]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 9]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_7: {:chat=>{:id=>9, :to_id=>3, :from_id=>7, :from_username=>nil, :to_username=>nil, :messages=>[]}}
+[ActionCable] Broadcasting to current_user_3: {:chat=>{:id=>9, :to_id=>3, :from_id=>7, :from_username=>nil, :to_username=>nil, :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>9, "to_id"=>3, "from_id"=>7, "from_username"=>nil, "to_username"=>nil, "messages"=>[]}} (via streamed from current_user_7)
+Completed 200 OK in 93ms (ActiveRecord: 46.3ms)
+
+
+Started GET "/users/rob" for ::1 at 2019-07-13 16:02:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rob"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.35ms)
+Completed 200 OK in 27ms (Views: 10.3ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users/7/chats" for ::1 at 2019-07-13 16:02:24 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>2, "from_id"=>7, "to_username"=>"rob", "user_id"=>"7", "chat"=>{"to_id"=>2, "from_id"=>7, "to_username"=>"rob"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.4ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "to_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2019-07-13 20:02:24.200203"], ["updated_at", "2019-07-13 20:02:24.200203"], ["to_id", 2], ["from_id", 7], ["to_username", "rob"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 10]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_7: {:chat=>{:id=>10, :to_id=>2, :from_id=>7, :from_username=>nil, :to_username=>"rob", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_2: {:chat=>{:id=>10, :to_id=>2, :from_id=>7, :from_username=>nil, :to_username=>"rob", :messages=>[]}}
+Completed 200 OK in 69ms (ActiveRecord: 47.9ms)
+
+
+Started GET "/users/rob" for ::1 at 2019-07-13 16:02:29 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"rob"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.3ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/7/chats" for ::1 at 2019-07-13 16:02:29 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>2, "from_id"=>7, "to_username"=>"rob", "user_id"=>"7", "chat"=>{"to_id"=>2, "from_id"=>7, "to_username"=>"rob"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.3ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "to_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2019-07-13 20:02:29.821322"], ["updated_at", "2019-07-13 20:02:29.821322"], ["to_id", 2], ["from_id", 7], ["to_username", "rob"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 11]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_7: {:chat=>{:id=>11, :to_id=>2, :from_id=>7, :from_username=>nil, :to_username=>"rob", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_2: {:chat=>{:id=>11, :to_id=>2, :from_id=>7, :from_username=>nil, :to_username=>"rob", :messages=>[]}}
+Completed 200 OK in 48ms (ActiveRecord: 40.8ms)
+
+
+Started GET "/cable?user=1" for ::1 at 2019-07-13 16:02:31 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:02:31 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Started GET "/users/pedro" for ::1 at 2019-07-13 16:02:31 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"pedro"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "pedro"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.43ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/7/chats" for ::1 at 2019-07-13 16:02:31 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>5, "from_id"=>7, "to_username"=>"pedro", "user_id"=>"7", "chat"=>{"to_id"=>5, "from_id"=>7, "to_username"=>"pedro"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (1.7ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "to_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2019-07-13 20:02:31.859894"], ["updated_at", "2019-07-13 20:02:31.859894"], ["to_id", 5], ["from_id", 7], ["to_username", "pedro"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 12]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_7: {:chat=>{:id=>12, :to_id=>5, :from_id=>7, :from_username=>nil, :to_username=>"pedro", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_5: {:chat=>{:id=>12, :to_id=>5, :from_id=>7, :from_username=>nil, :to_username=>"pedro", :messages=>[]}}
+Completed 200 OK in 53ms (ActiveRecord: 43.5ms)
+
+
+Started GET "/cable?user=7" for ::1 at 2019-07-13 16:02:33 -0400
+Started GET "/cable/?user=7" [WebSocket] for ::1 at 2019-07-13 16:02:33 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvNw)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_7
+Started GET "/cable?user=1" for ::1 at 2019-07-13 16:02:53 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/michaelmcguire/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:02:53 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+Started POST "/users" for ::1 at 2019-07-13 16:03:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"rod", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"rod"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rod"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "rod"], ["password_digest", "$2a$12$BCOOXRez8Blgk/ueYyIS6ODwfc8s/KcNUBxpBkl1zQnDTZNkgfwGG"], ["created_at", "2019-07-13 20:03:07.073462"], ["updated_at", "2019-07-13 20:03:07.073462"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rod"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 608ms (Views: 6.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/cable?user=8" for ::1 at 2019-07-13 16:03:10 -0400
+Started GET "/cable/?user=8" [WebSocket] for ::1 at 2019-07-13 16:03:10 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Started GET "/users/8/chats" for ::1 at 2019-07-13 16:03:10 -0400
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvOA)
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_8
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.6ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 8]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 8]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (3.58ms)
+Completed 200 OK in 20ms (Views: 3.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 16:03:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.47ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/8/chats" for ::1 at 2019-07-13 16:03:14 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>8, "to_username"=>"mem", "user_id"=>"8", "chat"=>{"to_id"=>1, "from_id"=>8, "to_username"=>"mem"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.6ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "to_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2019-07-13 20:03:14.776836"], ["updated_at", "2019-07-13 20:03:14.776836"], ["to_id", 1], ["from_id", 8], ["to_username", "mem"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 13]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_8: {:chat=>{:id=>13, :to_id=>1, :from_id=>8, :from_username=>nil, :to_username=>"mem", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>13, :to_id=>1, :from_id=>8, :from_username=>nil, :to_username=>"mem", :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>13, "to_id"=>1, "from_id"=>8, "from_username"=>nil, "to_username"=>"mem", "messages"=>[]}} (via streamed from current_user_8)
+Completed 200 OK in 101ms (ActiveRecord: 48.0ms)
+
+
+ChatsChannel transmitting {"chat"=>{"id"=>13, "to_id"=>1, "from_id"=>8, "from_username"=>nil, "to_username"=>"mem", "messages"=>[]}} (via streamed from current_user_1)
+Finished "/cable/?user=8" [WebSocket] for ::1 at 2019-07-13 16:04:15 -0400
+ChatsChannel stopped streaming from current_user_8
+Finished "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:04:16 -0400
+ChatsChannel stopped streaming from current_user_1
+Started GET "/cable?user=8" for ::1 at 2019-07-13 16:04:40 -0400
+Started GET "/cable/?user=8" [WebSocket] for ::1 at 2019-07-13 16:04:40 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvOA)
+Started GET "/users/8/chats" for ::1 at 2019-07-13 16:04:40 -0400
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"8"}
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_8
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 8]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.5ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 8]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (4.08ms)
+Completed 200 OK in 13ms (Views: 3.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/users/jill" for ::1 at 2019-07-13 16:04:44 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"jill"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "jill"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.29ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/8/chats" for ::1 at 2019-07-13 16:04:44 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>3, "from_id"=>8, "to_username"=>"jill", "user_id"=>"8", "chat"=>{"to_id"=>3, "from_id"=>8, "to_username"=>"jill"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.3ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "to_username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2019-07-13 20:04:44.431318"], ["updated_at", "2019-07-13 20:04:44.431318"], ["to_id", 3], ["from_id", 8], ["to_username", "jill"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (39.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 14]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_8: {:chat=>{:id=>14, :to_id=>3, :from_id=>8, :from_username=>nil, :to_username=>"jill", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_3: {:chat=>{:id=>14, :to_id=>3, :from_id=>8, :from_username=>nil, :to_username=>"jill", :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>14, "to_id"=>3, "from_id"=>8, "from_username"=>nil, "to_username"=>"jill", "messages"=>[]}} (via streamed from current_user_8)
+Completed 200 OK in 48ms (ActiveRecord: 40.9ms)
+
+
+Finished "/cable/?user=8" [WebSocket] for ::1 at 2019-07-13 16:05:56 -0400
+ChatsChannel stopped streaming from current_user_8
+Started POST "/users" for ::1 at 2019-07-13 16:06:10 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"rob", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"rob"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.09ms)
+Completed 422 Unprocessable Entity in 308ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2019-07-13 16:06:30 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"rob", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"rob"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "rob"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.08ms)
+Completed 422 Unprocessable Entity in 296ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2019-07-13 16:07:39 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"username"=>"hon", "password"=>"[FILTERED]", "passwordConfirm"=>"[FILTERED]", "user"=>{"username"=>"hon"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hon"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "hon"], ["password_digest", "$2a$12$KzWUxwQlCeE.Hmuki8pV/.5fLwouGmm2qbAKcv8p09bcVu4SYJowC"], ["created_at", "2019-07-13 20:07:39.526594"], ["updated_at", "2019-07-13 20:07:39.526594"]]
+  ↳ app/controllers/users_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:23
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "hon"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:23
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 589ms (Views: 0.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/cable?user=9" for ::1 at 2019-07-13 16:07:42 -0400
+Started GET "/cable/?user=9" [WebSocket] for ::1 at 2019-07-13 16:07:42 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvOQ)
+Started GET "/users/9/chats" for ::1 at 2019-07-13 16:07:42 -0400
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_9
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+[active_model_serializers]   [1m[36mChat Load (0.3ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 9]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.2ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 9]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (1.63ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/cable?user=1" for ::1 at 2019-07-13 16:07:44 -0400
+Started GET "/users/1/chats" for ::1 at 2019-07-13 16:07:44 -0400
+Started GET "/cable/?user=1" [WebSocket] for ::1 at 2019-07-13 16:07:44 -0400
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+Processing by ChatsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/channels/application_cable/connection.rb:13
+Registered connection (Z2lkOi8vY29udmV5L1VzZXIvMQ)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+ChatsChannel is transmitting the subscription confirmation
+ChatsChannel is streaming from current_user_1
+[active_model_serializers]   [1m[36mChat Load (1.8ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."from_id" = $1[0m  [["from_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers]   [1m[36mChat Load (0.4ms)[0m  [1m[34mSELECT "chats".* FROM "chats" WHERE "chats"."to_id" = $1[0m  [["to_id", 1]]
+[active_model_serializers]   ↳ app/controllers/chats_controller.rb:10
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (15.08ms)
+Completed 200 OK in 31ms (Views: 13.5ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/users/mem" for ::1 at 2019-07-13 16:07:47 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"mem"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mem"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with User (0.28ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/9/chats" for ::1 at 2019-07-13 16:07:47 -0400
+Processing by ChatsController#create as HTML
+  Parameters: {"to_id"=>1, "from_id"=>9, "from_username"=>"hon", "to_username"=>"mem", "user_id"=>"9", "chat"=>{"to_id"=>1, "from_id"=>9, "from_username"=>"hon", "to_username"=>"mem"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:62
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mChat Create (0.7ms)[0m  [1m[32mINSERT INTO "chats" ("created_at", "updated_at", "to_id", "from_id", "from_username", "to_username") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2019-07-13 20:07:47.704736"], ["updated_at", "2019-07-13 20:07:47.704736"], ["to_id", 1], ["from_id", 9], ["from_username", "hon"], ["to_username", "mem"]]
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[35m (40.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/chats_controller.rb:22
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."chat_id" = $1[0m  [["chat_id", 15]]
+  ↳ app/controllers/chats_controller.rb:26
+[ActionCable] Broadcasting to current_user_9: {:chat=>{:id=>15, :to_id=>1, :from_id=>9, :from_username=>"hon", :to_username=>"mem", :messages=>[]}}
+[ActionCable] Broadcasting to current_user_1: {:chat=>{:id=>15, :to_id=>1, :from_id=>9, :from_username=>"hon", :to_username=>"mem", :messages=>[]}}
+ChatsChannel transmitting {"chat"=>{"id"=>15, "to_id"=>1, "from_id"=>9, "from_username"=>"hon", "to_username"=>"mem", "messages"=>[]}} (via streamed from current_user_9)
+Completed 200 OK in 55ms (ActiveRecord: 42.6ms)
+
+
+ChatsChannel transmitting {"chat"=>{"id"=>15, "to_id"=>1, "from_id"=>9, "from_username"=>"hon", "to_username"=>"mem", "messages"=>[]}} (via streamed from current_user_1)

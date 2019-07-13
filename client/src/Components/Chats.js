@@ -25,13 +25,13 @@ class Chats extends Component {
 
     handleReceivedChat = res => {
         const {chat} = res;
+        console.log(chat)
         this.setState({
             chats: [...this.state.chats, chat]
         })
     }
 
     render(){
-
         return(      
                 <div>
                     {
