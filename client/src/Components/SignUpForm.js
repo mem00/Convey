@@ -19,6 +19,19 @@ class SignUpForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
+    if(this.state.password.length < 6 || this.state.passwordConfirm.length < 6) {
+      
+     if(this.state.password !== this.state.passwordConfirm ) {
+       alert("Passwords Do Not Match") 
+       return this.setState({
+          password:"",
+          passwordConfirm:""
+      })
+   }   
+      alert("Password must be at least 6 characters long.")
+      return
+    }
+
     if(this.state.password !== this.state.passwordConfirm ) {
        alert("Passwords Do Not Match")
        
