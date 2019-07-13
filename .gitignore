@@ -5,44 +5,44 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore bundler config.
-convey/.bundle
+/.bundle
 
 # Ignore all logfiles and tempfiles.
-convey/log/*
-convey/tmp/*
-convey/!/log/.keep
-convey/!/tmp/.keep
+/log/*
+/tmp/*
+/!/log/.keep
+/!/tmp/.keep
 
 # Ignore uploaded files in development
-convey/storage/*
-convey/!/storage/.keep
+/storage/*
+/!/storage/.keep
 
-convey/.byebug_history
+/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
-convey/config/master.key
+/config/master.key
 
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-convey/client/node_modules
-convey/client/.pnp
-convey/client/.pnp.js
+/client/node_modules
+/client/.pnp
+/client/.pnp.js
 
 # testing
-convey/client/coverage
+/client/coverage
 
 # production
-convey/client/build
+/client/build
 
 # misc
-convey/client/.DS_Store
-convey/client/.env.local
-convey/client/.env.development.local
-convey/client/.env.test.local
-convey/client/.env.production.local
+/client/.DS_Store
+/client/.env.local
+/client/.env.development.local
+/client/.env.test.local
+/client/.env.production.local
 
-convey/client/npm-debug.log*
-convey/client/yarn-debug.log*
-convey/client/yarn-error.log*
+/client/npm-debug.log*
+/client/yarn-debug.log*
+/client/yarn-error.log*
