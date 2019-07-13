@@ -18,7 +18,8 @@ class Chats extends Component {
             }
          }
         const res = await axios.get(`${API_ROOT}/users/${this.props.userId}/chats`, config)
-        const chats = res.data.chats_from
+        const {chats_from, chats_to }= res.data
+        const chats = chats_from.concat(chats_to)
         this.setState({chats})
     }
 
@@ -44,8 +45,11 @@ class Chats extends Component {
                     <h1>Chats</h1>
                     <ul>
                     {this.state.chats.map(chat => (
-                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.to_id}</Link></li>
-                     ))}
+                        chat.from_id === this.props.userId ?
+                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.to_username}</Link></li>
+                        :
+                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.from_username}</Link></li>
+                    ))}
                     </ul>
                     <NewChatForm userId = {this.props.userId} token ={this.props.token}/>
                 </div>
