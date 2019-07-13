@@ -21,3 +21,28 @@ convey/.byebug_history
 
 # Ignore master key for decrypting credentials and more.
 convey/config/master.key
+
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+convey/client/node_modules
+convey/client/.pnp
+convey/client/.pnp.js
+
+# testing
+convey/client/coverage
+
+# production
+convey/client/build
+
+# misc
+convey/client/.DS_Store
+convey/client/.env.local
+convey/client/.env.development.local
+convey/client/.env.test.local
+convey/client/.env.production.local
+
+convey/client/npm-debug.log*
+convey/client/yarn-debug.log*
+convey/client/yarn-error.log*
