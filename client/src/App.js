@@ -27,13 +27,18 @@ class App extends Component {
   }
 
   handleLogin = async (data)=> {
-    const res = await axios.post('http://localhost:3000/auth/login', data)
-    const {token} = res.data
-    localStorage.setItem("jwt", token)
-    this.setState({
-      currentUser: decode(token),
-      token
-     })
+    try{
+      const res = await axios.post('http://localhost:3000/auth/login', data)
+      const {token} = res.data
+      localStorage.setItem("jwt", token)
+      this.setState({
+        currentUser: decode(token),
+        token
+      })
+    }
+    catch{
+      alert("Invalid credentials. Please try again.")
+    }
   }
 
   handleLogout = () =>{
