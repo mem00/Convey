@@ -45,13 +45,19 @@ class App extends Component {
   }
 
   handleSignUp = async  (data)=> {
-    const res = await axios.post('http://localhost:3000/users', data)
-    const {token} = res.data
-    localStorage.setItem("jwt", token)
-    this.setState({
-      currentUser: decode(token),
-      token: token
-    })
+    try{
+      const res = await axios.post('http://localhost:3000/users', data)
+      const {token} = res.data
+      localStorage.setItem("jwt", token)
+      this.setState({
+        currentUser: decode(token),
+        token: token
+      })
+    }
+    catch{
+      alert("Username already exists, please use another.")
+
+    }
   
   }
 
