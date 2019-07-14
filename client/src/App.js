@@ -4,11 +4,15 @@ import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignUpForm";
 import Chats from "./Components/Chats"
 import Chat from "./Components/Chat"
+import LoginSignup from "./Components/LoginSignup"
 import { ActionCableProvider } from "react-actioncable-provider";
 import {API_WS_ROOT} from './Constants'
-
 import axios from 'axios'
 import decode from 'jwt-decode'
+import './App.css'
+import Card from "@material-ui/core/Card"
+import CardContent from '@material-ui/core/Card'
+
 
 
 class App extends Component {
@@ -61,7 +65,6 @@ class App extends Component {
     }
     catch{
       alert("Username already exists, please use another.")
-
     }
   
   }
@@ -84,7 +87,7 @@ class App extends Component {
             </h1>
           </header>
           <Switch>
-            <Route exact path = "/" render={()=> <div>Please Login/Signup</div>}/>
+            <Route exact path = "/" render={()=> <LoginSignup/>}/>
             <Route exact path = "/home" render={()=> <div>Welcome To Convey</div>}/>
             <Route exact path="/login" render={() => <LoginForm  handleLogin={this.handleLogin} />} />
             <Route exact path="/signup" render={() => <SignUpForm  handleSignUp={this.handleSignUp} />} />
