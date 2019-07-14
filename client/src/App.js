@@ -78,12 +78,10 @@ class App extends Component {
         <div className="App">    
         {this.state.currentUser.user_id ? <Redirect to='/home'/> : <Redirect to='/'/>}  
           <header>
-          <nav> {!this.state.currentUser.user_id ? <nav><Link to='/signup'>Sign Up</Link> <Link to='/login'>Log in</Link></nav> : <nav><Link to='/chats'>Chats</Link> <a  onClick={this.handleLogout}> Log Out </a> </nav>}</nav>
+          <nav> {!this.state.currentUser.user_id ? null : <nav><Link to='/chats'>Chats</Link> <a  onClick={this.handleLogout}> Log Out </a> </nav>}</nav>
            <div>{this.state.currentUser.user_id && `Hello, ${this.state.currentUser.username}.`}</div>
             <h1>
-              <Link to="/">
-                Convey
-              </Link>
+             
             </h1>
           </header>
           <Switch>

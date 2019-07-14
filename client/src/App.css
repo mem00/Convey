@@ -31,3 +31,20 @@
     transform: rotate(360deg);
   }
 }
+
+.button-white{
+  color: white
+}
+
+.title{
+  color: rgb(72,66,183)
+}
+
+.login{
+  height: 320px;
+  width: 280px; 
+}
+.signup{
+  height: 400px;
+  width: 280px; 
+}

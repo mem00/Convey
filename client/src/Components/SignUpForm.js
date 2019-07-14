@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+import Card from "@material-ui/core/Card"
+import Grid from "@material-ui/core/Grid"
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField';
+import {Link} from 'react-router-dom'
 
 
 
@@ -44,38 +49,49 @@ class SignUpForm extends Component {
 
   render() {
     return (
-      <div className="auth-container">
-        <h2>Sign up</h2>
-        <hr />
+      <Grid container justify= "center">
+      <Card className="signup">
+        <h2 className="title">Sign Up</h2>  
         <form
           onSubmit={this.handleSubmit}
         >
-          <p>Username:</p>
-          <input
+          <TextField
+            variant="outlined"
             name="username"
             type="text"
+            placeholder="username"
             value={this.state.username}
             onChange={this.handleChange}
           />
-          <p>Password:</p>
-          <input
+          <br/>
+          <br/>
+          <TextField
+            variant="outlined"
             name="password"
             type="password"
+            placeholder="password"
             value={this.state.password}
             onChange={this.handleChange}
           />
-            <p>Confirm Password</p>
-           <input
+          <br/>
+          <br/>
+          <TextField
+            variant="outlined"
             name="passwordConfirm"
             type="password"
+            placeholder="confirm password"
             value={this.state.passwordConfirm}
             onChange={this.handleChange}
           />
-
-          <hr />
-          <button>Sign Up</button>
+          <br/>
+          <br/>
+          <Button variant= "contained" color="primary">Sign Up</Button>
         </form>
-      </div>
+        <br/>
+        <br/>
+        <Link to="/login">Already have an account? Login</Link>
+     </Card>
+    </Grid>    
     );
   }
 }
