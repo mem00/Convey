@@ -54,7 +54,7 @@ class LoginForm extends Component {
           />
           <br/>
           <br/>
-          <Button variant= "contained" color="primary">Login</Button>  
+          <Button variant= "contained" color="primary" type="submit">Login</Button>  
         </form>
         <br/>
         <br/>

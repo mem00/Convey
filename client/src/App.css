@@ -48,3 +48,16 @@
   height: 400px;
   width: 280px; 
 }
+
+.chats{
+  width: 280px;
+}
+
+.chat{
+  text-align:center;
+}
+
+.add-button{
+  height: 50%;
+  width: 50%;
+}

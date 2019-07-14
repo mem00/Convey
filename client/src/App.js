@@ -10,8 +10,7 @@ import {API_WS_ROOT} from './Constants'
 import axios from 'axios'
 import decode from 'jwt-decode'
 import './App.css'
-import Card from "@material-ui/core/Card"
-import CardContent from '@material-ui/core/Card'
+import Button from '@material-ui/core/Button'
 
 
 
@@ -76,10 +75,9 @@ class App extends Component {
 
       <Router>
         <div className="App">    
-        {this.state.currentUser.user_id ? <Redirect to='/home'/> : <Redirect to='/'/>}  
+        {this.state.currentUser.user_id ? <Redirect to='/chats'/> : <Redirect to='/'/>}  
           <header>
-          <nav> {!this.state.currentUser.user_id ? null : <nav><Link to='/chats'>Chats</Link> <a  onClick={this.handleLogout}> Log Out </a> </nav>}</nav>
-           <div>{this.state.currentUser.user_id && `Hello, ${this.state.currentUser.username}.`}</div>
+          <nav> {!this.state.currentUser.user_id ? null : <nav> <Button color= "primary"  onClick={this.handleLogout}> Log Out </Button> </nav>}</nav>
             <h1>
              
             </h1>

@@ -4,6 +4,10 @@ import { ActionCableConsumer} from 'react-actioncable-provider'
 import { API_ROOT} from '../Constants'
 import axios from 'axios'
 import NewChatForm from './NewChatForm'
+import Card from "@material-ui/core/Card"
+import Grid from "@material-ui/core/Grid"
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
 class Chats extends Component {
     state = {
@@ -33,27 +37,29 @@ class Chats extends Component {
 
     render(){
         return(      
-                <div>
-                    {
-                    //from Tyson
-                    this.acc ? this.acc : this.acc = <ActionCableConsumer
-                    channel={{channel: "ChatsChannel"}}
-                    onReceived={(res) =>this.handleReceivedChat(res)}
-                    /> 
-                    }
-                    <h1>Chats</h1>
-                    <ul>
+            <Grid container justify= "center">         
+                {
+                //from Tyson
+                this.acc ? this.acc : this.acc = <ActionCableConsumer
+                channel={{channel: "ChatsChannel"}}
+                onReceived={(res) =>this.handleReceivedChat(res)}
+                /> 
+                }
+                <Card className="chats" >
+                    <h2 className="title">Chats</h2>
+                    <Grid container justify= "center">   
+                    <List>
                     {this.state.chats.map(chat => (
                         chat.from_id === this.props.userId ?
-                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.to_username}</Link></li>
+                        <ListItem className ="chat" key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.to_username}</Link></ListItem>
                         :
-                        <li key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.from_username}</Link></li>
+                        <ListItem className="chat" key={chat.id}> <Link to={{pathname: '/chat', state: { chat_id: chat.id, to_id: chat.to_id, from_id: chat.from_id}}}>{chat.from_username}</Link></ListItem>
                     ))}
-                    </ul>
+                    </List>
+                    </Grid>
                     <NewChatForm userId = {this.props.userId} token ={this.props.token} chats={this.state.chats} from_username={this.props.username}/>
-                </div>
-          
-            
+                </Card>
+            </Grid>    
         )
     }
 

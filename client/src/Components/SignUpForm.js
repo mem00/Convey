@@ -24,8 +24,6 @@ class SignUpForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
 
- 
-
     if(this.state.password !== this.state.passwordConfirm ) {
        alert("Passwords Do Not Match")
        
@@ -43,8 +41,7 @@ class SignUpForm extends Component {
       return
     }
     
-    this.props.handleSignUp(this.state)
-   
+    this.props.handleSignUp(this.state) 
   }
 
   render() {
@@ -85,7 +82,7 @@ class SignUpForm extends Component {
           />
           <br/>
           <br/>
-          <Button variant= "contained" color="primary">Sign Up</Button>
+          <Button variant= "contained" color="primary" type="submit">Sign Up</Button>
         </form>
         <br/>
         <br/>
