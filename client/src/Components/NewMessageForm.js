@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import {API_ROOT} from "../Constants"
 import axios from 'axios'
+import { TextField } from '@material-ui/core';
+import Button from "@material-ui/core/Button"
 
 class NewMessageForm extends Component {
   constructor(props){
@@ -27,24 +29,29 @@ class NewMessageForm extends Component {
         }
     }
     await axios.post(`${API_ROOT}/users/${this.props.from_id}/chats/${this.props.to_id}/messages`, this.state, config)
+    this.setState({
+      content: ""
+    })
   }
 
   render() {
     return (
       <div>
-        <h2>create message</h2>
-        <hr />
         <form
           onSubmit={this.handleSubmit}>
-          <input
+          <TextField
+            variant="outlined"
             name="content"
             type="text"
+            placeholder="message"
             value={this.state.content}
             onChange={this.handleChange}
           />
-
-          <hr />
-          <button>Send Message</button>
+          <br/>
+          <br/>
+          <Button variant="contained" color="primary" type="submit">Send</Button>
+          <br/>
+          <br/>
         </form>
       </div>
     );

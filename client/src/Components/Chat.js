@@ -3,6 +3,13 @@ import axios from 'axios'
 import {API_ROOT} from '../Constants'
 import { ActionCableConsumer} from 'react-actioncable-provider'
 import NewMessageForm from './NewMessageForm'
+import Card from "@material-ui/core/Card"
+
+import Grid from "@material-ui/core/Grid"
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+
+
 
 class Chat extends Component{
     state = {
@@ -31,20 +38,26 @@ class Chat extends Component{
         return(
        
             <div>
-    
-               {     //from Tyson
-               
+               {     //from Tyson          
                 this.acc ? this.acc : this.acc = <ActionCableConsumer
                 // key={this.props.location.state.id}  
                 channel={{channel: "MessagesChannel", to_id: this.props.location.state.to_id, from_id: this.props.location.state.from_id }}
                 onReceived={(res) =>this.handleReceivedMessage(res)}
                 /> }
-                    <ul>
-                        {this.state.messages.map(message=>(
-                        <li key={message.id}>{message.from_username}:{<br/>}{message.content}</li> 
-                        ))}
-                    </ul>
-                    <NewMessageForm chat_id = {this.props.location.state.chat_id} from_id = {this.props.location.state.from_id} to_id = {this.props.location.state.to_id} from_username={this.props.username}/>
+                    <Grid container justify = "center">
+                        <Card className="chats">
+                            <List>
+                                {this.state.messages.map(message=>(
+                
+                                <List>
+                                    <ListItem key={message.id}>{<b>{message.from_username}</b>} </ListItem>
+                                    <ListItem>{message.content}</ListItem> 
+                                </List>
+                                ))}
+                            </List>
+                            <NewMessageForm chat_id = {this.props.location.state.chat_id} from_id = {this.props.location.state.from_id} to_id = {this.props.location.state.to_id} from_username={this.props.username}/>
+                        </Card>
+                    </Grid>  
                 </div>
            
         )
