@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::API
 
-  def index
-    render file: "#{Rails.root}/public/index.html"
+  def fallback_index_html
+    render :file => 'public/index.html'
   end
   
   #from auth lecture  

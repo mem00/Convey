@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  root to: "application#index"
+  
+  get '*path', to: "application#fallback_index_html", constraints: ->(request) do
+    !request.xhr? && request.format.html?
+  end
   
   #from auth lecture
   post '/auth/login', to: 'authentication#login'
