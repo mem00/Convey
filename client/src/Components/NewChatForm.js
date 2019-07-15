@@ -99,6 +99,8 @@ class NewChatForm extends Component {
       <Fab  onClick={this.handleOpenModal} color="primary" aria-label="Add"  >
         <AddIcon />
       </Fab>
+      <br/>
+      <br/>
       <Modal
         ariaHideApp={false}
         isOpen={this.state.showModal}
