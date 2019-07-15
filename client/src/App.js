@@ -77,7 +77,7 @@ class App extends Component {
         <div className="App">    
         {this.state.currentUser.user_id ? <Redirect to='/chats'/> : <Redirect to='/'/>}  
           <header>
-          <nav> {!this.state.currentUser.user_id ? null : <nav> <Button color= "primary"  onClick={this.handleLogout}> Log Out </Button> </nav>}</nav>
+          <nav> {!this.state.currentUser.user_id ? null : <nav> <Button color= "primary"  onClick={this.handleLogout}> Logout </Button> </nav>}</nav>
             <h1>
              
             </h1>
