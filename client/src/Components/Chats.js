@@ -23,16 +23,9 @@ class Chats extends Component {
          }
         const res = await axios.get(`${API_ROOT}/users/${this.props.userId}/chats`, config)
         const {chats_from, chats_to }= res.data
-        let chats  
-        if(chats_from.id && chats_to.id){
-         chats = chats_from.concat(chats_to)
-        }
-        else if(chats_to.id){
-          chats = chats_to
-        }
-        else if(chats_from.id) {
-          chats = chats_from
-        } 
+  
+        const chats = chats_from.concat(chats_to)
+      
         this.setState({chats})
     }
 
