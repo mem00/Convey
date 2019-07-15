@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import LoginForm from "./Components/LoginForm";
 import SignUpForm from "./Components/SignUpForm";
 import Chats from "./Components/Chats"
 import Chat from "./Components/Chat"
 import LoginSignup from "./Components/LoginSignup"
 import { ActionCableProvider } from "react-actioncable-provider";
-import {API_WS_ROOT} from './Constants'
+import {API_WS_ROOT, API_ROOT} from './Constants'
 import axios from 'axios'
 import decode from 'jwt-decode'
 import './App.css'
@@ -31,7 +31,7 @@ class App extends Component {
 
   handleLogin = async (data)=> {
     try{
-      const res = await axios.post('http://localhost:3000/auth/login', data)
+      const res = await axios.post(`${API_ROOT}/auth/login`, data)
       const {token} = res.data
       localStorage.setItem("jwt", token)
       this.setState({
@@ -54,7 +54,7 @@ class App extends Component {
 
   handleSignUp = async  (data)=> {
     try{
-      const res = await axios.post('http://localhost:3000/users', data)
+      const res = await axios.post(`${API_ROOT}/users`, data)
       const {token} = res.data
       localStorage.setItem("jwt", token)
       this.setState({
