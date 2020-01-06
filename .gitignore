@@ -22,6 +22,7 @@
 # Ignore master key for decrypting credentials and more.
 config/master.key
 
+config/local_env.yml
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
