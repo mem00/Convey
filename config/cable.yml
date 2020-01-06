@@ -1,7 +1,7 @@
 development: &development
-  :url: ENV[REDIS_LOCAL_URL]
+  :url: ENV["REDIS_LOCAL_URL"]
   :host: localhost
-  :port: ENV[REDIS_LOCAL_PORT]
+  :port: ENV["REDIS_LOCAL_PORT"]
   :timeout: 1
   :inline: true
 test: *development
